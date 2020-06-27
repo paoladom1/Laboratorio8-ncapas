@@ -1,6 +1,7 @@
 package com.uca.capas.modelo.service;
 
 import java.text.ParseException;
+import java.util.EmptyStackException;
 import java.util.List;
 
 import com.uca.capas.modelo.dto.ClienteDTO;
@@ -42,5 +43,13 @@ public interface ClienteService {
 
 	public List<ClienteDTO> getClienteMarca(String marca);
 	/************************************************************************* */
+
+	public int insertClienteAutoId(Cliente c);
+
+	public void updateCliente(Cliente c);
+
+	public int ejecutarProcJdbc(Integer cliente, Boolean estado);
+
+	public int[][] cargaMasiva() throws ParseException;
 
 }
